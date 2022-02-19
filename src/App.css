@@ -1,3 +1,59 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.card{
+  align-items: center;
+  padding: 20px;
+  margin: 130px;
+  background-color: #e6baff6b;
+  border: 2px solid #b9abc79e;
+}
+
+.totalNumber{
+  background-color: #5e6f91;
+  color: aliceblue;
+  border-radius: 30px;
+  padding: 10px 23px;
+  font-size: 15px;
+}
+
+.selectedNumber{
+  background-color: #ddc747;
+  color: aliceblue;
+  border-radius: 6px;
+  padding: 11px 10px;
+  font-size: 15px;
+  width: 55px;
+
+}
+
+.buttons button{
+  border-radius: 6px;
+    color: white;
+    font-size: 16px;
+}
+
+.controlBtn {
+  padding: 5px 10px;
+  margin: 0 3px;
+  border-radius: 6px;
+}
+.fa-cart-shopping{
+  font-size: 20px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .card {
+    margin: 130px 0;
+
+  }
+}
+
+
+/* ------------------------------------------- */
 .App {
   text-align: center;
 }
