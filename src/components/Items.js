@@ -4,37 +4,25 @@ export default class Items extends Component {
 
   constructor(props) {
     super(props)
-  
-    this.state = {
-        noOfItem: 0,
-       
-    }
-    
   }
 
-   addItem = ()=>{
-      this.setState((ps)=> ({      
-        noOfItem: ps.noOfItem+ 1 
-      }))
+  addItem = ()=>{
+     this.props.editItem(this.props.index, 'add');
   }
   
   subItem = ()=>{
-    this.setState((ps)=> ({
-      noOfItem: ps.noOfItem >0 ? ps.noOfItem - 1 : this.state.noOfItem
-    }))
+    this.props.editItem(this.props.index, 'sub');
   } 
 
   removeItem =()=>{
-    this.props.delete(this.props.index)   
+    this.props.editItem(this.props.index, 'remove');   
   }
 
   render() {
-
-  
     return (
       <div>
         <div className="selectItem my-2">
-        <span className="badge badge-pill badge-dark selectedNumber mx-3">{this.state.noOfItem == 0 ? 'ZERO': this.state.noOfItem}</span>
+        <span className="badge badge-pill badge-dark selectedNumber mx-3">{this.props.nos == 0 ? 'ZERO': this.props.nos}</span>
         <button type="button" onClick={this.addItem} className="btn btn-secondary controlBtn"><i className="fa-solid fa-plus"></i></button>
         <button type="button" onClick={this.subItem} className="btn btn-info controlBtn text-white"><i className="fa-solid fa-minus"></i></button>
         <button type="button" onClick={this.removeItem} className="btn btn-danger controlBtn"><i className="fa-solid fa-trash-can"></i></button>
